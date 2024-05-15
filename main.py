@@ -1,10 +1,11 @@
+import time
+from datetime import datetime
+
 import numpy as np
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
-import time
-from datetime import datetime
-import pandas as pd
 from selenium.webdriver.common.by import By
 
 
