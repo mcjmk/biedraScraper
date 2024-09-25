@@ -1,5 +1,5 @@
 # biedraScraper 
-`biedraScraper` is a simple Python script to scrap the newest prices from [zakupy.biedronka.pl](https://zakupy.biedronka.pl) and save them to XLSX file using Selenium.
+`biedraScraper` is a simple Python script to scrap the newest prices from [zakupy.biedronka.pl](https://zakupy.biedronka.pl) using Selenium and save them to XLSX file using Pandas.
 
 
 ## Requirements
