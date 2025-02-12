@@ -20,7 +20,7 @@
 3. Activate the virtual environment:
     - On Windows:
     ```bash
-    venv\Scripts\activate
+    .venv\Scripts\activate
     ```
     - On macOS and Linux:
     ```bash
@@ -35,7 +35,7 @@
 ## Usage 
 1. Run the script:
     ```bash
-    python biedraScraper.py
+    python src/biedrascraper/main.py
     ```
 2. Check the output file: 
 
