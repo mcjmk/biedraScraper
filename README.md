@@ -3,40 +3,43 @@
 
 
 ## Requirements
+- Python 3.11+
+- [uv](https://github.com/astral-sh/uv) package manager
 
-- Python 3.x
+Core dependencies (managed by uv):
+- numpy 2.2.2+
+- openpyxl 3.1.5+
+- pandas 2.2.3+
+- selenium 4.28.1+
 
 ## Installation
+
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/mcjmk/biedraScraper.git
-    cd biedraScraper
-    ```
-2. Create a virtual environment:
-    ```bash
-    python -m venv venv
-    ```
+   ```bash
+   git clone https://github.com/mcjmk/biedraScraper.git
+   cd biedraScraper
+   ```
 
-3. Activate the virtual environment:
-    - On Windows:
-    ```bash
-    .venv\Scripts\activate
-    ```
-    - On macOS and Linux:
-    ```bash
-    source venv/bin/activate
-    ```
-
-4. Install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. Set up environment and install dependencies:
+   ```bash
+   uv venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   uv sync
+   ```
 
 ## Usage 
-1. Run the script:
-    ```bash
-    python src/biedrascraper/main.py
-    ```
-2. Check the output file: 
 
-    After running the script, the scraped prices will be saved in the `biedra_{today}.xlsx`. Enjoy! :)
+```bash
+uv run src/biedrascraper/main.py
+```
+
+After running the script, the scraped prices will be saved in the `biedra_{today}.xlsx`. Enjoy! :)
+
+## Project Structure
+
+The code is split into a few files in the `src/biedrascraper` directory:
+
+- `config.py` - URL and category configurations
+- `fetch.py` - scraping logic using Selenium
+- `save.py` - saving data to different formats
+- `main.py` - main script that puts it all together
