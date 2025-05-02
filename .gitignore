@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# results
+*.xlsx
+*.csv
+*.json
