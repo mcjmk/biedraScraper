@@ -1,0 +1,24 @@
+name: Ruff Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Ruff Check
+        uses: astral-sh/ruff-action@v3
+        with:
+          # The default command is "check"
+          # Here we explicitly set it for clarity.
+          args: "check"
+          # Optionally, set the "src" input if your code is not in the root
+          src: "./src"
