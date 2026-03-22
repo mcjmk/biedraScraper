@@ -1,6 +1,6 @@
-URL = "https://zakupy.biedronka.pl/"
+URL: str = "https://zakupy.biedronka.pl/"
 
-CATEGORIES = [
+CATEGORIES: list[str] = [
     "warzywa",
     # "owoce",
     # "piekarnia",
@@ -17,4 +17,4 @@ CATEGORIES = [
 ]
 
 
-URLS = [URL + category for category in CATEGORIES]
+URLS: list[str] = [f"{URL}{category}" for category in CATEGORIES]
